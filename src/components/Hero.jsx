@@ -4,7 +4,7 @@ import {Carousel, Button} from 'react-bootstrap';
 export const Hero = () => {
   return (
     <>
-    <Carousel fade>
+    <Carousel fade id="home">
     
       <Carousel.Item interval={1000}>
         <img

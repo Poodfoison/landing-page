@@ -116,7 +116,7 @@ export const Contact = () => {
         rows={9} style={{ resize: 'none'}} />
       </Form.Group>
       <br/>
-    <Button type="submit" variant="outline-success" block>Submit</Button>
+    <Button type="submit" variant="outline-primary" block>Submit</Button>
     <br/>
     <span> </span>
     </Form>
