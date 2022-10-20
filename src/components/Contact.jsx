@@ -23,7 +23,7 @@ export const Contact = () => {
               const body = {name, email, message}
               
               const response = await fetch(
-                  "https://api.ahglab.com/api:fXznCvvM",
+                  "https://api.ahglab.com/api:fXznCvvM/contact_us",
                   {
                       method: "POST",
                       headers: {
@@ -76,11 +76,12 @@ export const Contact = () => {
 
 <br/>
 <br/>
+<br/>
 <Container>
 <Row>
 <Col >
    
-<Card style={{ height: '585px'}}>
+<Card style={{ height: '500px'}}>
 <br/>
 <Container>
 
@@ -114,7 +115,7 @@ export const Contact = () => {
                       name="message"  
                       value={message} 
                       onChange={e => onChange(e)}
-        rows={9} style={{ resize: 'none'}} />
+        rows={5} style={{ resize: 'none'}} />
       </Form.Group>
       <br/>
     <Button type="submit" variant="outline-primary">Submit</Button>
