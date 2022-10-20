@@ -32,9 +32,9 @@ export const Contact = () => {
                       body: JSON.stringify(body)
                   }
               )
-              
+              console.log(response)
               const parseRes = await response.json()
-  
+              console.log(parseRes)
               if(parseRes) {
                   toast.success('Message Successfully Sent', {
                     position: "top-center",
@@ -79,13 +79,14 @@ export const Contact = () => {
 <Container>
 <Row>
 <Col >
-<ToastContainer />     
+   
 <Card style={{ height: '585px'}}>
 <br/>
 <Container>
+
 <Form onSubmit={onSubmitForm.value}>
 <h4 className='text-center'>Contact Us:</h4>
-    <Form.Group  controlId="exampleForm.ControlInput1">
+    <Form.Group  >
         <Form.Label className="fw-bold">Full Name:</Form.Label>
         <Form.Control type="name" 
                       placeholder="Enter Full Name"
@@ -95,7 +96,7 @@ export const Contact = () => {
                       onChange={e => onChange(e)}/>
     </Form.Group>
     <br/>
-    <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Group >
         <Form.Label className="fw-bold">Email address:</Form.Label>
         <Form.Control type="email" 
                       placeholder="Enter Email Address" 
@@ -106,7 +107,7 @@ export const Contact = () => {
     </Form.Group>
     <br/>
     
-    <Form.Group controlId="exampleForm.ControlTextarea1">
+    <Form.Group >
         <Form.Label className="fw-bold">Message:</Form.Label>
         <Form.Control as="textarea"
                       id="messageForm" 
@@ -116,10 +117,11 @@ export const Contact = () => {
         rows={9} style={{ resize: 'none'}} />
       </Form.Group>
       <br/>
-    <Button type="submit" variant="outline-primary" block>Submit</Button>
+    <Button type="submit" variant="outline-primary">Submit</Button>
     <br/>
     <span> </span>
     </Form>
+    <ToastContainer/>  
     </Container>
     
     </Card>

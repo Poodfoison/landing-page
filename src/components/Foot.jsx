@@ -20,7 +20,7 @@ export const Foot = () => {
                 </Col>
                 <Col varaint="success">
                  <a href="#home" className='h6'>Home</a><span> </span>
-                 <a href="#services" className='h6'>Services</a><span> </span>
+                 <a href="#about" className='h6'>About Us</a><span> </span>
                  <a href="#portfoli" className='h6'>Porfolio</a><span> </span>
                  <a href="#contact" className='h6'>Contact Us</a>
                 </Col>

@@ -3,7 +3,6 @@ import { Nav, Navbar, Container, Button, NavDropdown  } from 'react-bootstrap';
 import styled from 'styled-components';
 
 
-
 const Styles = styled.div`
 Nav{
 
@@ -20,7 +19,7 @@ Nav{
   color: black;
   text-decoration-line: underline;
   &:hover {
-    color: blue;
+    color: green;
   }
 }
 Button {
@@ -38,9 +37,8 @@ export const Navigationbar = () => {
   return (
     <Styles>
     <Navbar expand="lg">
-
       <Container fluid>
-        <Navbar.Brand smooth to="#home"><img
+        <Navbar.Brand href="#"><img
               src={require('../assets/logo.jpg')}
               width="80"
               height="80"
@@ -54,17 +52,17 @@ export const Navigationbar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link to="/home" >Home</Nav.Link>
-            <Nav.Link to="/about" >About Us</Nav.Link>
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">Services</Nav.Link>
             <NavDropdown title="Portfolio" id="navbarScrollingDropdown">
-            <NavDropdown.Item to="/gallery" >Gallery</NavDropdown.Item>
-              <NavDropdown.Item href="#" >Weddings</NavDropdown.Item>
-              <NavDropdown.Item href="#" >
+            <NavDropdown.Item href="#action3">Gallery</NavDropdown.Item>
+              <NavDropdown.Item href="#" disabled>Weddings</NavDropdown.Item>
+              <NavDropdown.Item href="#" disabled>
                 Pre-Nups
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-            <Button variant="outline-primary">Contact Us</Button>
+            <Button variant="outline-success" href='./Contact.jsx'>Contact Us</Button>
 
         </Navbar.Collapse>
       </Container>
